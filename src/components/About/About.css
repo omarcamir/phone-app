@@ -1,0 +1,11 @@
+
+.profile{
+    background: url('../../assets/images/Omar.JPG') no-repeat;
+    background-size: cover;
+    width: 25rem;
+    height: 25rem;
+}
+
+.about__texts{
+    height: 100% !important;
+}

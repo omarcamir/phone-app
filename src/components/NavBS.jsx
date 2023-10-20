@@ -8,11 +8,12 @@ function NavBS() {
   return (
     <Navbar bg="dark" data-bs-theme="dark">
         <Container>
-          <Navbar.Brand><Link to="/" className='nav-link'>E-Commerce</Link></Navbar.Brand>
+          <Navbar.Brand><Link to="/" className='nav-link'>E-commerce</Link></Navbar.Brand>
           <Nav className="ms-auto">
             <Nav.Link><Link to="/" className='nav-link'>Home</Link></Nav.Link>
             <Nav.Link><Link to="/shop" className='nav-link'>Shop</Link></Nav.Link>
-            <Nav.Link><Link to="/features" className='nav-link'>Features</Link></Nav.Link>
+            <Nav.Link><Link to="/counter" className='nav-link'>Counter</Link></Nav.Link>
+            <Nav.Link><Link to="/about" className='nav-link'>About</Link></Nav.Link>
             <Nav.Link><Link to="/contactUs" className='nav-link'>Contact us</Link></Nav.Link>
           </Nav>
         </Container>
