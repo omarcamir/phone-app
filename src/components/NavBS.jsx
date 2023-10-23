@@ -3,8 +3,11 @@ import {Link} from 'react-router-dom'
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
+import { useSelector } from 'react-redux';
 
 function NavBS() {
+
+  const counterGlobalState = useSelector(store => store.counter.counter)
   return (
     <Navbar bg="dark" data-bs-theme="dark">
         <Container>
@@ -12,7 +15,7 @@ function NavBS() {
           <Nav className="ms-auto">
             <Nav.Link><Link to="/" className='nav-link'>Home</Link></Nav.Link>
             <Nav.Link><Link to="/shop" className='nav-link'>Shop</Link></Nav.Link>
-            <Nav.Link><Link to="/counter" className='nav-link'>Counter</Link></Nav.Link>
+            <Nav.Link><Link to="/counter" className='nav-link'>Counter <span className=''>{counterGlobalState}</span></Link></Nav.Link>
             <Nav.Link><Link to="/about" className='nav-link'>About</Link></Nav.Link>
             <Nav.Link><Link to="/contactUs" className='nav-link'>Contact us</Link></Nav.Link>
           </Nav>
