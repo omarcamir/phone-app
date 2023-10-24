@@ -9,16 +9,23 @@ function NavBS() {
 
   const counterGlobalState = useSelector(store => store.counter.counter)
   return (
-    <Navbar bg="dark" data-bs-theme="dark">
+    <Navbar bg="dark" data-bs-theme="dark" expand="lg">
         <Container>
-          <Navbar.Brand><Link to="/" className='nav-link'>E-commerce</Link></Navbar.Brand>
-          <Nav className="ms-auto">
-            <Nav.Link><Link to="/" className='nav-link'>Home</Link></Nav.Link>
-            <Nav.Link><Link to="/shop" className='nav-link'>Shop</Link></Nav.Link>
-            <Nav.Link><Link to="/counter" className='nav-link'>Counter <span className=''>{counterGlobalState}</span></Link></Nav.Link>
-            <Nav.Link><Link to="/about" className='nav-link'>About</Link></Nav.Link>
-            <Nav.Link><Link to="/contactUs" className='nav-link'>Contact us</Link></Nav.Link>
-          </Nav>
+          <Navbar.Brand as={Link} to="/" className='nav-link'>E-commerce</Navbar.Brand>
+          <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+          <Navbar.Collapse id="responsive-navbar-nav">
+            <Nav className="ms-auto">
+              <Nav.Link as={Link} to="/" className='nav-link'>Home</Nav.Link>
+              <Nav.Link as={Link} to="/shop" className='nav-link'>Shop</Nav.Link>
+              <Nav.Link as={Link} to="/counter" className='nav-link'>Counter <span className=''>{counterGlobalState}</span></Nav.Link>
+              <Nav.Link as={Link} to="/about" className='nav-link'>About</Nav.Link>
+              <Nav.Link as={Link} to="/contactus" className='nav-link'>Contact us</Nav.Link>
+            </Nav>
+            <Nav className="ms-auto">
+              <Nav.Link as={Link} to="/login" className='nav-link'>Login</Nav.Link>
+              <Nav.Link as={Link} to="/register" className='nav-link'>Register</Nav.Link>
+            </Nav>
+          </Navbar.Collapse>
         </Container>
       </Navbar>
   )
